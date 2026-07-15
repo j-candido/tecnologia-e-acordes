@@ -1,123 +1,64 @@
-# 🎵 Tecnologia e Acordes
+# Tecnologia e Acordes
 
-Portfólio profissional desenvolvido com Next.js, React, TypeScript e Tailwind CSS.
+Status
+Next.js
+TypeScript
+Tailwind CSS
 
----
+Site oficial do projeto **Tecnologia e Acordes**, desenvolvido para compartilhar projetos, estudos, experiências e conteúdos sobre tecnologia, inteligência artificial e música.
 
-## 📖 Sobre o projeto
+## 🌐 Acesse o projeto
 
-O **Tecnologia e Acordes** é meu portfólio profissional, criado para reunir minha trajetória acadêmica, experiência profissional, projetos e produção de conteúdo sobre tecnologia, inteligência artificial e música.
+**Site:** [https://tecnologia-e-acordes.vercel.app/](https://tecnologia-e-acordes.vercel.app/)
 
-Além de apresentar meu trabalho, este projeto também representa minha evolução como desenvolvedora Front-end utilizando tecnologias modernas.
-
----
-
-## ✨ Funcionalidades
-
-- Página inicial (Hero)
-
-- Sobre mim
-
-- Formação e capacitações
-
-- Projetos
-
-- Blog
-
-- Contato
-
-- Rodapé responsivo
-
----
-
-## 🛠️ Tecnologias utilizadas
+## ✨ Tecnologias utilizadas
 
 - Next.js
-
 - React
-
 - TypeScript
-
 - Tailwind CSS
+- Git
+- GitHub
+- Vercel
 
----
 
-## 🚀 Como executar
 
-```bash
-
-npm install
-
-npm run dev
+## 📂 Estrutura do projeto
 
 ```
-
-Abra:
-
-```
-
-[http://localhost:3000](http://localhost:3000)
-
-```
-
----
-
-## 📁 Estrutura do projeto
-
-```
-
 app/
-
 components/
-
-public/
-
 docs/
-
+public/
 ```
 
----
 
-## 🎯 Roadmap
 
-### Versão 1.0
+## 📚 Documentação
 
-- ✅ Estrutura inicial
+A documentação do projeto está disponível na pasta **docs**.
 
-- ✅ Hero
+Ela contém:
 
-- ✅ Sobre
+- Arquitetura
+- Roadmap
+- Decisões do projeto
+- Especificação do site
 
-- ✅ Formação
 
-- ✅ Projetos
 
-- ✅ Blog
+## 🎯 Objetivo
 
-- ✅ Contato
+Este projeto foi desenvolvido com fins educacionais e também como portfólio pessoal.
 
-- ✅ Rodapé
+O objetivo é demonstrar boas práticas no desenvolvimento de aplicações modernas utilizando Next.js, documentação, versionamento com Git e publicação contínua utilizando GitHub e Vercel.
 
-### Próximas versões
+## 🤝 Contribuições
 
-- Menu responsivo
+Sugestões e melhorias são sempre bem-vindas.
 
-- Scroll To Top
+## 📜 Licença
 
-- SEO
+Este projeto está licenciado sob a licença MIT.
 
-- Favicon personalizado
-
-- Integração com o Blogger
-
-- Área de certificados
-
-- Página individual de projetos
-
----
-
-## 👩‍💻 Desenvolvido por
-
-**Juliana Cândido**
-
-Tecnologia e Acordes
+Consulte o arquivo LICENSE para mais informações.

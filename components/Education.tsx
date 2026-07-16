@@ -44,6 +44,12 @@ const cards = [
   
   const certifications = [
     {
+      title: "Espanhol",
+      institution: "IFRS",
+      workload: "30 horas",
+      status: "Em andamento",
+    },
+    {
       title: "Inteligência Artificial na Prática",
       institution: "SC TEC",
       workload: "46 horas",

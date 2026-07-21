@@ -1,24 +1,10 @@
 # 🎸 Tecnologia e Acordes
 
-<p align="center">
 
-  <img src="public/images/capa-tecnologia-e-acordes.png" alt="Tecnologia e Acordes" width="100%">
 
-</p>
 
-<p align="center">
 
-![Status]([https://img.shields.io/badge/status-Em%20Desenvolvimento-success](https://img.shields.io/badge/status-Em%20Desenvolvimento-success))
 
-![Next.js]([https://img.shields.io/badge/Next.js-15-black](https://img.shields.io/badge/Next.js-15-black))
-
-![TypeScript]([https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white))
-
-![Tailwind CSS]([https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white))
-
-![Vercel]([https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel))
-
-</p>
 
 ---
 
@@ -29,6 +15,8 @@ O **Tecnologia e Acordes** é meu espaço para compartilhar conhecimento, experi
 O site foi desenvolvido com **Next.js**, seguindo boas práticas de desenvolvimento moderno, e está em constante evolução. Além de servir como meu portfólio pessoal, ele reúne artigos, estudos, projetos e experimentos envolvendo desenvolvimento de software, Inteligência Artificial e infraestrutura de TI.
 
 ---
+
+
 
 ## 🚀 Acesse o projeto
 
@@ -42,29 +30,25 @@ O site foi desenvolvido com **Next.js**, seguindo boas práticas de desenvolvime
 
 ---
 
+
+
 # ✨ Funcionalidades
 
 - ✅ Página inicial moderna
-
 - ✅ Layout totalmente responsivo
-
 - ✅ Integração automática com o Blogger
-
 - ✅ Páginas individuais
-
 - ✅ Navegação otimizada
-
 - ✅ SEO inicial
-
 - ✅ Deploy automatizado pela Vercel
 
 ---
 
+
+
 # 🛠️ Tecnologias
 
 | Tecnologia | Descrição |
-
-|------------|-----------|
 
 | Next.js | Framework React |
 
@@ -82,6 +66,8 @@ O site foi desenvolvido com **Next.js**, seguindo boas práticas de desenvolvime
 
 ---
 
+
+
 # 📂 Estrutura
 
 ```text
@@ -98,23 +84,22 @@ docs/
 
 ---
 
+
+
 # 📚 Documentação
 
 A pasta **docs** reúne toda a documentação técnica do projeto.
 
 - Arquitetura
-
 - Roadmap
-
 - Deploy
-
 - Identidade Visual
-
 - Changelog
-
 - Decisões de desenvolvimento
 
 ---
+
+
 
 # 🎯 Objetivo
 
@@ -123,50 +108,44 @@ Mais do que um simples site, o **Tecnologia e Acordes** é um projeto de aprendi
 Cada nova funcionalidade é desenvolvida com foco em:
 
 - boas práticas
-
 - organização do código
-
 - documentação
-
 - versionamento
-
 - experiência do usuário
-
 - evolução constante
 
 O objetivo é documentar minha trajetória como profissional de tecnologia enquanto compartilho conhecimento com a comunidade.
 
 ---
 
+
+
 # 🗺️ Roadmap
+
+
 
 ## ✅ Versão 2.0
 
 - Nova Home
-
 - Nova identidade visual
-
 - Páginas dedicadas
-
 - Feed automático do Blogger
-
 - Melhor organização do conteúdo
+
+
 
 ### 🔜 Próximas versões
 
 - Favicon personalizado
-
 - SEO avançado
-
 - Modo escuro
-
 - Busca no site
-
 - Newsletter
-
 - Página de projetos aprimorada
 
 ---
+
+
 
 # 🤝 Contribuições
 
@@ -176,9 +155,10 @@ Caso encontre alguma melhoria, fique à vontade para abrir uma Issue ou enviar u
 
 ---
 
+
+
 # 📜 Licença
 
 Distribuído sob a licença **MIT**.
 
 Consulte o arquivo **LICENSE** para mais informações.
-

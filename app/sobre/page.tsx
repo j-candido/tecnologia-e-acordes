@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import About from "@/components/About";
 import Scrolltotop from "@/components/Scrolltotop";
+import Footer from "@/components/Footer";
 
 export default function SobrePage() {
   return (
@@ -8,6 +9,7 @@ export default function SobrePage() {
       <Header />
       <About />
       <Scrolltotop />
+      <Footer />
     </main>
   );
 }

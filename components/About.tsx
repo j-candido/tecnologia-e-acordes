@@ -10,7 +10,7 @@ export default function About() {
             SOBRE MIM
           </p>
   
-          <h2 className="mt-4 text-5xl font-bold leading-tight">
+          <h2 className="text-5xl font-bold text-slate-100">
           Um pouco da minha história na tecnologia.
           </h2>
   

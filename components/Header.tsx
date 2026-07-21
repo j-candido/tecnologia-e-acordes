@@ -4,12 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 const menuItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre mim", href: "#sobre" },
-  { label: "Capacitações", href: "#capacitacoes" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/" },
+  { label: "Sobre mim", href: "/sobre" },
+  { label: "Capacitações", href: "/capacitacoes" },
+  { label: "Projetos", href: "/projetos" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contato", href: "/contato" },
 ];
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#070B1A]/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link
-          href="#inicio"
+          href="/"
           className="text-lg font-bold"
           onClick={closeMenu}
         >

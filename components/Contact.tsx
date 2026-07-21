@@ -23,7 +23,7 @@ const contactLinks = [
               Contato
             </p>
   
-            <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
+            <h2 className="text-5xl font-bold text-slate-100">
               Vamos compartilhar ideias e construir novas conexões.
             </h2>
   

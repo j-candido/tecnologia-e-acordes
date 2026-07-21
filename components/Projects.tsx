@@ -42,7 +42,7 @@ const projects = [
             Projetos
           </p>
   
-          <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
+          <h2 className="text-5xl font-bold text-slate-100">
             Ideias transformadas em experiências reais.
           </h2>
   
@@ -68,7 +68,7 @@ const projects = [
                 </span>
               </div>
   
-              <h3 className="mt-6 text-2xl font-bold leading-snug">
+              <h3 className="mt-6 text-2xl font-bold leading-snug text-slate-100">
                 {project.title}
               </h3>
   

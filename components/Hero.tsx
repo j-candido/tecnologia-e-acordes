@@ -23,7 +23,7 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="#projetos"
+              href="/projetos"
               className="rounded-xl bg-white px-6 py-3 text-center font-semibold text-[#0d0714] transition hover:bg-purple-100"
             >
               Conheça meus projetos

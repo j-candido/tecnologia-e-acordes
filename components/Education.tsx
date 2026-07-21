@@ -86,7 +86,7 @@ const cards = [
             Formação & Capacitações
           </p>
   
-          <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
+          <h2 className="text-5xl font-bold text-slate-100">
             Uma trajetória construída por estudo, prática e aprendizado contínuo.
           </h2>
   
@@ -115,11 +115,11 @@ const cards = [
                 {card.category}
               </p>
   
-              <h3 className="mt-3 text-xl font-bold leading-snug">
-                {card.title}
+              <h3 className="mt-3 text-xl font-bold leading-snug text-slate-100">
+            {card.title}
               </h3>
   
-              <p className="mt-4 leading-7 text-white/65">
+              <p className="mt-4 leading-7 text-slate-100/65">
                 {card.description}
               </p>
             </article>
@@ -132,9 +132,9 @@ const cards = [
               Cursos & Certificações
             </p>
   
-            <h3 className="mt-4 text-3xl font-bold sm:text-4xl">
+            <h2 className="text-5xl font-bold text-slate-100">
               Capacitações que acompanham minha evolução.
-            </h3>
+            </h2>
           </div>
   
           <div className="mt-10 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
@@ -148,11 +148,11 @@ const cards = [
                 }`}
               >
                 <div>
-                  <h4 className="text-lg font-semibold">
-                    {certification.title}
-                  </h4>
+                <h4 className="text-lg font-semibold text-slate-100">
+                  {certification.title}
+                </h4>
   
-                  <p className="mt-2 text-sm leading-6 text-white/55">
+                  <p className="mt-2 text-sm leading-6 text-slate-100/65">
                     {certification.institution} • {certification.workload}
                   </p>
                 </div>

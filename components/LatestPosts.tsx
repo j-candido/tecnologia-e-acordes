@@ -100,7 +100,7 @@ type BloggerLink = {
     }
   
     return (
-      <section className="mx-auto max-w-6xl px-6 py-28">
+        <section className="mx-auto max-w-6xl px-6 pt-12 pb-20">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
             Últimas atualizações

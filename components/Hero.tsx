@@ -2,10 +2,9 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    // cole aqui a seção completa
     <section
         id="inicio"
-        className="mx-auto grid min-h-[80vh] max-w-6xl items-center gap-12 px-6 pt-40 pb-20 lg:grid-cols-2"
+        className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-20 pb-16 lg:grid-cols-2"
     >
         <div className="max-w-2xl">
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">

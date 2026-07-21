@@ -1,64 +1,184 @@
-# Tecnologia e Acordes
+# 🎸 Tecnologia e Acordes
 
-Status
-Next.js
-TypeScript
-Tailwind CSS
+<p align="center">
 
-Site oficial do projeto **Tecnologia e Acordes**, desenvolvido para compartilhar projetos, estudos, experiências e conteúdos sobre tecnologia, inteligência artificial e música.
+  <img src="public/images/capa-tecnologia-e-acordes.png" alt="Tecnologia e Acordes" width="100%">
 
-## 🌐 Acesse o projeto
+</p>
 
-**Site:** [https://tecnologia-e-acordes.vercel.app/](https://tecnologia-e-acordes.vercel.app/)
+<p align="center">
 
-## ✨ Tecnologias utilizadas
+![Status]([https://img.shields.io/badge/status-Em%20Desenvolvimento-success](https://img.shields.io/badge/status-Em%20Desenvolvimento-success))
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Git
-- GitHub
-- Vercel
+![Next.js]([https://img.shields.io/badge/Next.js-15-black](https://img.shields.io/badge/Next.js-15-black))
 
+![TypeScript]([https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white))
 
+![Tailwind CSS]([https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white))
 
-## 📂 Estrutura do projeto
+![Vercel]([https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel))
 
-```
+</p>
+
+---
+
+## 🌐 Sobre o projeto
+
+O **Tecnologia e Acordes** é meu espaço para compartilhar conhecimento, experiências e projetos que unem duas grandes paixões: **tecnologia** e **música**.
+
+O site foi desenvolvido com **Next.js**, seguindo boas práticas de desenvolvimento moderno, e está em constante evolução. Além de servir como meu portfólio pessoal, ele reúne artigos, estudos, projetos e experimentos envolvendo desenvolvimento de software, Inteligência Artificial e infraestrutura de TI.
+
+---
+
+## 🚀 Acesse o projeto
+
+🌍 **Site oficial**
+
+**[https://www.tecnologiaeacordes.com.br](https://www.tecnologiaeacordes.com.br**)**
+
+📝 **Blog**
+
+[https://tecnologiaeacordes.blogspot.com/](https://tecnologiaeacordes.blogspot.com/)
+
+---
+
+# ✨ Funcionalidades
+
+- ✅ Página inicial moderna
+
+- ✅ Layout totalmente responsivo
+
+- ✅ Integração automática com o Blogger
+
+- ✅ Páginas individuais
+
+- ✅ Navegação otimizada
+
+- ✅ SEO inicial
+
+- ✅ Deploy automatizado pela Vercel
+
+---
+
+# 🛠️ Tecnologias
+
+| Tecnologia | Descrição |
+
+|------------|-----------|
+
+| Next.js | Framework React |
+
+| React | Interface da aplicação |
+
+| TypeScript | Tipagem estática |
+
+| Tailwind CSS | Estilização |
+
+| Git | Controle de versão |
+
+| GitHub | Hospedagem do código |
+
+| Vercel | Deploy automático |
+
+---
+
+# 📂 Estrutura
+
+```text
+
 app/
+
 components/
-docs/
+
 public/
+
+docs/
+
 ```
 
+---
 
+# 📚 Documentação
 
-## 📚 Documentação
-
-A documentação do projeto está disponível na pasta **docs**.
-
-Ela contém:
+A pasta **docs** reúne toda a documentação técnica do projeto.
 
 - Arquitetura
+
 - Roadmap
-- Decisões do projeto
-- Especificação do site
 
+- Deploy
 
+- Identidade Visual
 
-## 🎯 Objetivo
+- Changelog
 
-Este projeto foi desenvolvido com fins educacionais e também como portfólio pessoal.
+- Decisões de desenvolvimento
 
-O objetivo é demonstrar boas práticas no desenvolvimento de aplicações modernas utilizando Next.js, documentação, versionamento com Git e publicação contínua utilizando GitHub e Vercel.
+---
 
-## 🤝 Contribuições
+# 🎯 Objetivo
 
-Sugestões e melhorias são sempre bem-vindas.
+Mais do que um simples site, o **Tecnologia e Acordes** é um projeto de aprendizado contínuo.
 
-## 📜 Licença
+Cada nova funcionalidade é desenvolvida com foco em:
 
-Este projeto está licenciado sob a licença MIT.
+- boas práticas
 
-Consulte o arquivo LICENSE para mais informações.
+- organização do código
+
+- documentação
+
+- versionamento
+
+- experiência do usuário
+
+- evolução constante
+
+O objetivo é documentar minha trajetória como profissional de tecnologia enquanto compartilho conhecimento com a comunidade.
+
+---
+
+# 🗺️ Roadmap
+
+## ✅ Versão 2.0
+
+- Nova Home
+
+- Nova identidade visual
+
+- Páginas dedicadas
+
+- Feed automático do Blogger
+
+- Melhor organização do conteúdo
+
+### 🔜 Próximas versões
+
+- Favicon personalizado
+
+- SEO avançado
+
+- Modo escuro
+
+- Busca no site
+
+- Newsletter
+
+- Página de projetos aprimorada
+
+---
+
+# 🤝 Contribuições
+
+Sugestões, ideias e feedbacks são sempre muito bem-vindos.
+
+Caso encontre alguma melhoria, fique à vontade para abrir uma Issue ou enviar um Pull Request.
+
+---
+
+# 📜 Licença
+
+Distribuído sob a licença **MIT**.
+
+Consulte o arquivo **LICENSE** para mais informações.
+

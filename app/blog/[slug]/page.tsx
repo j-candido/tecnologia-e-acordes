@@ -112,9 +112,11 @@ export default async function BlogPostPage({
             [&_blockquote]:border-l-4
             [&_blockquote]:border-purple-500
             [&_blockquote]:bg-slate-50
-            [&_blockquote]:py-2
+            [&_blockquote]:py-3
             [&_blockquote]:pl-6
+            [&_blockquote]:pr-4
             [&_blockquote]:italic
+            [&_blockquote]:text-slate-700
 
             [&_code]:rounded
             [&_code]:bg-slate-100
@@ -126,18 +128,21 @@ export default async function BlogPostPage({
             [&_pre]:rounded-xl
             [&_pre]:bg-slate-900
             [&_pre]:p-5
+            [&_pre]:text-left
             [&_pre]:text-slate-100
 
             [&_h2]:mb-5
             [&_h2]:mt-12
             [&_h2]:text-2xl
             [&_h2]:font-bold
+            [&_h2]:text-left
             [&_h2]:text-slate-900
 
             [&_h3]:mb-4
             [&_h3]:mt-10
             [&_h3]:text-xl
             [&_h3]:font-bold
+            [&_h3]:text-left
             [&_h3]:text-slate-900
 
             [&_img]:mx-auto
@@ -153,10 +158,42 @@ export default async function BlogPostPage({
             [&_figure]:max-w-full
             [&_figure]:text-center
 
+            [&_iframe]:mx-auto
+            [&_iframe]:my-8
+            [&_iframe]:block
+            [&_iframe]:aspect-video
+            [&_iframe]:h-auto
+            [&_iframe]:w-full
+            [&_iframe]:max-w-3xl
+            [&_iframe]:rounded-2xl
+            [&_iframe]:border-0
+
+            [&_video]:mx-auto
+            [&_video]:my-8
+            [&_video]:block
+            [&_video]:h-auto
+            [&_video]:w-full
+            [&_video]:max-w-3xl
+            [&_video]:rounded-2xl
+
+            [&_div]:text-[15px]
+            [&_span]:text-[15px]
+            [&_font]:text-[15px]
+            [&_big]:text-[15px]
+            [&_small]:text-[15px]
+
             [&_strong]:font-bold
             [&_strong]:text-slate-900
 
+            [&_p>strong:only-child]:font-normal
+            [&_p>b:only-child]:font-normal
+            [&_div>strong:only-child]:font-normal
+            [&_div>b:only-child]:font-normal
+
             [&_p]:mb-4
+            [&_p]:text-[15px]
+            [&_p]:font-normal
+            [&_p]:leading-7
             [&_p]:text-justify
 
             [&_ul]:my-5
@@ -168,6 +205,9 @@ export default async function BlogPostPage({
             [&_ol]:pl-8
 
             [&_li]:mb-1
+            [&_li]:text-[15px]
+            [&_li]:font-normal
+            [&_li]:leading-7
             [&_li]:text-justify
           "
           dangerouslySetInnerHTML={{ __html: postHtml }}

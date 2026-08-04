@@ -130,15 +130,34 @@ export type BloggerLink = {
       .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
       .replace(/\son\w+=["'][^"']*["']/gi, "")
       .replace(/javascript:/gi, "")
+      .replace(/\sstyle=["'][^"']*["']/gi, "")
+      .replace(/\sclass=["'][^"']*["']/gi, "")
+      .replace(/\sid=["'][^"']*["']/gi, "")
+      .replace(/<\/?font[^>]*>/gi, "")
+      .replace(/<\/?big[^>]*>/gi, "")
+      .replace(/<\/?small[^>]*>/gi, "")
   
-      // remove estilos inline
-      .replace(/\sstyle="[^"]*"/gi, "")
+      // Remove negrito quando envolve um parágrafo inteiro
+      .replace(
+        /<p([^>]*)>\s*<(strong|b)>([\s\S]*?)<\/\2>\s*<\/p>/gi,
+        "<p$1>$3</p>"
+      )
   
-      // remove classes do Blogger
-      .replace(/\sclass="[^"]*"/gi, "")
+      // Remove negrito quando envolve uma div inteira
+      .replace(
+        /<div([^>]*)>\s*<(strong|b)>([\s\S]*?)<\/\2>\s*<\/div>/gi,
+        "<div$1>$3</div>"
+      )
   
-      // remove ids
-      .replace(/\sid="[^"]*"/gi, "");
+      // Corrige casos em que o Blogger abre o negrito antes de vários parágrafos
+      .replace(
+        /<(strong|b)>\s*((?:<p[^>]*>[\s\S]*?<\/p>\s*)+)<\/\1>/gi,
+        "$2"
+      )
+  
+      // Remove blocos vazios
+      .replace(/<p>\s*(?:&nbsp;|<br\s*\/?>|\s)*<\/p>/gi, "")
+      .replace(/<div>\s*(?:&nbsp;|<br\s*\/?>|\s)*<\/div>/gi, "");
   }
   
   export function formatPostDate(date: string): string {

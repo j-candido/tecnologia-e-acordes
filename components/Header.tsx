@@ -21,10 +21,10 @@ export default function Header() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#070B1A]/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-6 sm:py-4 md:py-5">
         <Link
           href="/"
-          className="text-lg font-bold"
+          className="text-base font-bold sm:text-lg"
           onClick={closeMenu}
         >
           Tecnologia e Acordes
@@ -45,7 +45,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setMenuOpen((current) => !current)}
-          className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition hover:border-purple-300/30 hover:bg-white/10 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition hover:border-purple-300/30 hover:bg-white/10 sm:h-11 sm:w-11 md:hidden"
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={menuOpen}
         >
@@ -78,13 +78,13 @@ export default function Header() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="mx-auto flex max-w-6xl flex-col px-6 py-4">
+        <nav className="mx-auto flex max-w-6xl flex-col px-6 py-3">
           {menuItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={closeMenu}
-              className="border-b border-white/5 py-4 text-white/70 transition last:border-b-0 hover:text-white"
+              className="border-b border-white/5 py-3 text-white/70 transition last:border-b-0 hover:text-white"
             >
               {item.label}
             </Link>

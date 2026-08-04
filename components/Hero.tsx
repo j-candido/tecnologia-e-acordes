@@ -28,14 +28,7 @@ export default function Hero() {
               Conheça meus projetos
             </Link>
 
-            <a
-              href="https://tecnologiaeacordes.blogspot.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl border border-white/20 px-6 py-3 text-center font-semibold transition hover:border-white/40 hover:bg-white/5"
-            >
-              Acessar o blog
-            </a>
+            
           </div>
         </div>
         <div className="relative">

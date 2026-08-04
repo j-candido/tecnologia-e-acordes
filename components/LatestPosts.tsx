@@ -38,7 +38,7 @@ export default async function LatestPosts() {
         </p>
 
         <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-100 md:text-5xl">
-          Novidades do blog
+        Publicações mais recentes
         </h2>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
@@ -95,7 +95,7 @@ export default async function LatestPosts() {
                     href={postUrl}
                     className="inline-flex font-semibold text-slate-100 transition hover:text-purple-300"
                   >
-                    Ler publicação
+                    Ler mais
                     <span className="ml-2" aria-hidden="true">
                       →
                     </span>

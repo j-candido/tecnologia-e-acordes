@@ -1,109 +1,15 @@
-type BloggerLink = {
-  rel: string;
-  href: string;
-};
+import Link from "next/link";
 
-type BloggerPost = {
-  id: {
-    $t: string;
-  };
-  title: {
-    $t: string;
-  };
-  published: {
-    $t: string;
-  };
-  content?: {
-    $t: string;
-  };
-  summary?: {
-    $t: string;
-  };
-  media$thumbnail?: {
-    url: string;
-  };
-  link: BloggerLink[];
-};
-
-type BloggerFeed = {
-  feed?: {
-    entry?: BloggerPost[];
-  };
-};
-
-const BLOG_FEED_URL =
-  "https://tecnologiaeacordes.blogspot.com/feeds/posts/default?alt=json&max-results=100";
-
-function removeHtml(html: string) {
-  return html
-    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
-    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function getPostImage(post: BloggerPost) {
-  const html = post.content?.$t ?? post.summary?.$t ?? "";
-
-  const imageMatch = html.match(
-    /<img[^>]+src=["']([^"']+)["'][^>]*>/i
-  );
-
-  if (imageMatch?.[1]) {
-    return imageMatch[1]
-      .replace(/\/s\d+(-c)?\//, "/s1200/")
-      .replace(/=s\d+(-c)?/, "=s1200");
-  }
-
-  if (post.media$thumbnail?.url) {
-    return post.media$thumbnail.url
-      .replace(/\/s\d+(-c)?\//, "/s1200/")
-      .replace(/=s\d+(-c)?/, "=s1200");
-  }
-
-  return "";
-}
-
-function getPostUrl(post: BloggerPost) {
-  return post.link.find((link) => link.rel === "alternate")?.href ?? "#";
-}
-
-function formatDate(date: string) {
-  return new Intl.DateTimeFormat("pt-BR", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(date));
-}
-
-async function getPosts() {
-  try {
-    const response = await fetch(BLOG_FEED_URL, {
-      next: {
-        revalidate: 3600,
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error("Não foi possível carregar as postagens.");
-    }
-
-    const data: BloggerFeed = await response.json();
-
-    return data.feed?.entry ?? [];
-  } catch (error) {
-    console.error("Erro ao carregar o feed do Blogger:", error);
-    return [];
-  }
-}
+import {
+  formatPostDate,
+  getBloggerPosts,
+  getPostImage,
+  getPostSlug,
+  removeHtml,
+} from "@/lib/blogger";
 
 export default async function Blog() {
-  const posts = await getPosts();
+  const posts = await getBloggerPosts();
 
   return (
     <section
@@ -138,7 +44,8 @@ export default async function Blog() {
       ) : (
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => {
-            const postUrl = getPostUrl(post);
+            const postSlug = getPostSlug(post);
+            const postUrl = `/blog/${postSlug}`;
             const imageUrl = getPostImage(post);
             const postContent =
               post.summary?.$t ?? post.content?.$t ?? "";
@@ -151,12 +58,7 @@ export default async function Blog() {
                 key={post.id.$t}
                 className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:bg-white/10"
               >
-                <a
-                  href={postUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
+                <Link href={postUrl} className="block">
                   <div className="aspect-[16/10] overflow-hidden bg-white/5">
                     {imageUrl ? (
                       <img
@@ -170,22 +72,20 @@ export default async function Blog() {
                       </div>
                     )}
                   </div>
-                </a>
+                </Link>
 
                 <div className="p-6">
                   <time className="text-sm text-white/45">
-                    {formatDate(post.published.$t)}
+                    {formatPostDate(post.published.$t)}
                   </time>
 
                   <h2 className="mt-3 text-xl font-semibold leading-snug text-white">
-                    <a
+                    <Link
                       href={postUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="transition hover:text-purple-200"
                     >
                       {post.title.$t}
-                    </a>
+                    </Link>
                   </h2>
 
                   {description && (
@@ -195,17 +95,15 @@ export default async function Blog() {
                     </p>
                   )}
 
-                  <a
+                  <Link
                     href={postUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="mt-5 inline-flex items-center font-semibold text-purple-300 transition hover:text-purple-200"
                   >
                     Ler artigo
                     <span className="ml-2" aria-hidden="true">
-                      ↗
+                      →
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </article>
             );

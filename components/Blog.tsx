@@ -56,9 +56,9 @@ export default async function Blog() {
             return (
               <article
                 key={post.id.$t}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:bg-white/10"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition duration-300 hover:-translate-y-1 hover:bg-white/10"
               >
-                <Link href={postUrl} className="block">
+                <Link href={postUrl} className="block overflow-hidden">
                   <div className="aspect-[16/10] overflow-hidden bg-white/5">
                     {imageUrl ? (
                       <img
@@ -74,12 +74,12 @@ export default async function Blog() {
                   </div>
                 </Link>
 
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <time className="text-sm text-white/45">
                     {formatPostDate(post.published.$t)}
                   </time>
 
-                  <h2 className="mt-3 text-xl font-semibold leading-snug text-white">
+                  <h2 className="mt-3 min-h-[84px] line-clamp-3 text-xl font-semibold leading-snug text-white">
                     <Link
                       href={postUrl}
                       className="transition hover:text-purple-200"
@@ -89,7 +89,7 @@ export default async function Blog() {
                   </h2>
 
                   {description && (
-                    <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/60">
+                    <p className="mt-3 min-h-[72px] line-clamp-3 text-sm leading-6 text-white/60">
                       {description}
                       {cleanContent.length > 150 ? "..." : ""}
                     </p>
@@ -97,9 +97,9 @@ export default async function Blog() {
 
                   <Link
                     href={postUrl}
-                    className="mt-5 inline-flex items-center font-semibold text-purple-300 transition hover:text-purple-200"
+                    className="mt-auto inline-flex items-center pt-5 font-semibold text-purple-300 transition hover:text-purple-200"
                   >
-                    Ler artigo
+                    Ler mais
                     <span className="ml-2" aria-hidden="true">
                       →
                     </span>

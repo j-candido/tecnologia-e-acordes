@@ -38,7 +38,7 @@ export default async function LatestPosts() {
         </p>
 
         <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-100 md:text-5xl">
-        Publicações mais recentes
+          Publicações mais recentes
         </h2>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
@@ -86,11 +86,11 @@ export default async function LatestPosts() {
                   </Link>
                 </h3>
 
-                <p className="mt-4 flex-1 leading-7 text-slate-300">
+                <p className="mt-4 line-clamp-4 flex-1 text-[16px] leading-7 text-slate-300">
                   {createExcerpt(post)}
                 </p>
 
-                <div className="mt-8 border-t border-white/10 pt-6">
+                <div className="mt-auto border-t border-white/10 pt-6">
                   <Link
                     href={postUrl}
                     className="inline-flex font-semibold text-slate-100 transition hover:text-purple-300"

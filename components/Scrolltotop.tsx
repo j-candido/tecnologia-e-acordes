@@ -2,15 +2,16 @@
 
 import { useEffect, useState } from "react";
 
-export default function ScrollToTop() {
-  const [visible, setVisible] = useState(false);
+export default function Scrolltotop() {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setVisible(window.scrollY > 300);
-    };
+    function handleScroll() {
+      setIsVisible(window.scrollY > 400);
+    }
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -22,17 +23,51 @@ export default function ScrollToTop() {
     });
   }
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
     <button
+      type="button"
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-purple-600 text-2xl text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-purple-500 ${
-        visible
-          ? "translate-y-0 opacity-100"
-          : "pointer-events-none translate-y-6 opacity-0"
-      }`}
       aria-label="Voltar ao topo"
+      title="Voltar ao topo"
+      className="
+        fixed bottom-6 right-6 z-50
+        flex h-11 w-11 items-center justify-center
+        rounded-full
+        border border-purple-300/30
+        bg-[#11182d]/80
+        text-purple-200
+        shadow-lg shadow-black/30
+        backdrop-blur-md
+        transition duration-300
+        hover:-translate-y-1
+        hover:border-purple-300/60
+        hover:bg-purple-500/20
+        hover:text-white
+        focus:outline-none
+        focus:ring-2
+        focus:ring-purple-400
+        focus:ring-offset-2
+        focus:ring-offset-[#070B1A]
+      "
     >
-      ↑
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 24 24"
+        fill="none"
+        className="h-5 w-5"
+      >
+        <path
+          d="M12 19V5M6.5 10.5 12 5l5.5 5.5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
     </button>
   );
 }

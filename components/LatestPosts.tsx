@@ -33,11 +33,7 @@ export default async function LatestPosts() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-20 pt-12">
       <div className="max-w-4xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
-          Últimas atualizações
-        </p>
-
-        <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-100 md:text-5xl">
+        <h2 className="text-4xl font-bold leading-tight text-slate-100 md:text-5xl">
           Publicações mais recentes
         </h2>
 

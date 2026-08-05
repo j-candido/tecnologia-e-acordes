@@ -7,10 +7,6 @@ export default function Hero() {
         className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-8 pt-8 md:pt-14 lg:grid-cols-2"
     >
         <div className="max-w-2xl">
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
-                Tecnologia • Inteligência Artificial • Música
-            </p>
-
           <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
             Onde a tecnologia encontra a criatividade.
           </h1>

@@ -28,7 +28,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Artigo não encontrado | Tecnologia e Acordes",
+      title: "Artigo não encontrado",
     };
   }
 
@@ -37,7 +37,7 @@ export async function generateMetadata({
   const image = getPostImage(post);
 
   return {
-    title: `${post.title.$t} | Tecnologia e Acordes`,
+    title: post.title.$t,
     description,
     openGraph: {
       title: post.title.$t,

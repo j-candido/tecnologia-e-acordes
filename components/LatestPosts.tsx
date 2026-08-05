@@ -64,6 +64,9 @@ export default async function LatestPosts() {
                     href={postUrl}
                     className="-mx-7 -mt-7 mb-7 block overflow-hidden"
                   >
+                    {/* O feed pode apontar para hosts externos variados; usar
+                        next/image exigiria liberar um wildcard no servidor. */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={postImage}
                       alt={`Imagem da publicação ${post.title.$t}`}

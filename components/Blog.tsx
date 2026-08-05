@@ -61,6 +61,9 @@ export default async function Blog() {
                 <Link href={postUrl} className="block overflow-hidden">
                   <div className="aspect-[16/10] overflow-hidden bg-white/5">
                     {imageUrl ? (
+                      /* O feed pode apontar para hosts externos variados; usar
+                         next/image exigiria liberar um wildcard no servidor. */
+                      /* eslint-disable-next-line @next/next/no-img-element */
                       <img
                         src={imageUrl}
                         alt={`Imagem da postagem ${post.title.$t}`}

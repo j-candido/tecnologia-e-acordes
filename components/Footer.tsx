@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <Link
-            href="#inicio"
+            href="/#inicio"
             className="font-semibold text-white transition hover:text-purple-300"
           >
             Tecnologia e Acordes

@@ -1,3 +1,5 @@
+import sanitizeHtml from "sanitize-html";
+
 export type BloggerLink = {
     rel: string;
     href: string;
@@ -35,11 +37,20 @@ export type BloggerLink = {
   };
   
   const BLOG_FEED_URL =
-    "https://tecnologiaeacordes.blogspot.com/feeds/posts/default?alt=json&max-results=100";
+    "https://tecnologiaeacordes.blogspot.com/feeds/posts/default";
+  const BLOG_FEED_PAGE_SIZE = 100;
   
   export async function getBloggerPosts(): Promise<BloggerPost[]> {
-    try {
-      const response = await fetch(BLOG_FEED_URL, {
+    const posts: BloggerPost[] = [];
+    let startIndex = 1;
+
+    while (true) {
+      const url = new URL(BLOG_FEED_URL);
+      url.searchParams.set("alt", "json");
+      url.searchParams.set("max-results", String(BLOG_FEED_PAGE_SIZE));
+      url.searchParams.set("start-index", String(startIndex));
+
+      const response = await fetch(url, {
         next: {
           revalidate: 3600,
         },
@@ -51,10 +62,15 @@ export type BloggerLink = {
   
       const data: BloggerFeed = await response.json();
   
-      return data.feed?.entry ?? [];
-    } catch (error) {
-      console.error("Erro ao carregar as postagens:", error);
-      return [];
+      const pagePosts = data.feed?.entry ?? [];
+
+      posts.push(...pagePosts);
+
+      if (pagePosts.length < BLOG_FEED_PAGE_SIZE) {
+        return posts;
+      }
+
+      startIndex += BLOG_FEED_PAGE_SIZE;
     }
   }
   
@@ -125,14 +141,39 @@ export type BloggerLink = {
   }
   
   export function cleanPostHtml(html: string): string {
-    return html
-      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
-      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
-      .replace(/\son\w+=["'][^"']*["']/gi, "")
-      .replace(/javascript:/gi, "")
-      .replace(/\sstyle=["'][^"']*["']/gi, "")
-      .replace(/\sclass=["'][^"']*["']/gi, "")
-      .replace(/\sid=["'][^"']*["']/gi, "")
+    const sanitizedHtml = sanitizeHtml(html, {
+      allowedTags: [
+        "a", "b", "blockquote", "br", "code", "div", "em", "figcaption",
+        "figure", "h2", "h3", "h4", "hr", "i", "iframe", "img", "li",
+        "ol", "p", "pre", "span", "strong", "table", "tbody", "td", "th",
+        "thead", "tr", "ul", "video", "source",
+      ],
+      allowedAttributes: {
+        a: ["href", "target", "rel", "title"],
+        iframe: ["src", "title", "allow", "allowfullscreen", "loading"],
+        img: ["src", "alt", "title", "width", "height", "loading"],
+        video: ["src", "controls", "poster", "width", "height"],
+        source: ["src", "type"],
+        td: ["colspan", "rowspan"],
+        th: ["colspan", "rowspan", "scope"],
+      },
+      allowedSchemes: ["http", "https", "mailto"],
+      allowedIframeHostnames: [
+        "www.youtube.com",
+        "youtube.com",
+        "player.vimeo.com",
+      ],
+      transformTags: {
+        a: sanitizeHtml.simpleTransform(
+          "a",
+          { rel: "noopener noreferrer" },
+          true
+        ),
+        img: sanitizeHtml.simpleTransform("img", { loading: "lazy" }, true),
+      },
+    });
+
+    return sanitizedHtml
       .replace(/<\/?font[^>]*>/gi, "")
       .replace(/<\/?big[^>]*>/gi, "")
       .replace(/<\/?small[^>]*>/gi, "")

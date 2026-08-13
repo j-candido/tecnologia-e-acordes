@@ -45,6 +45,24 @@ Além das páginas institucionais, o site consome automaticamente as publicaçõ
 do Blogger e gera páginas individuais, metadados e conteúdo otimizado para
 buscadores e compartilhamento em redes sociais.
 
+## Visão do projeto
+
+<p align="center">
+  <img
+    src="docs/images/pagina-inicial.png"
+    alt="Página inicial do Tecnologia e Acordes"
+    width="900"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="docs/images/projetos.png"
+    alt="Página de projetos do Tecnologia e Acordes"
+    width="900"
+  />
+</p>
+
 ### Links rápidos
 
 | Destino | Link |
@@ -126,7 +144,9 @@ Abra [http://localhost:3000](http://localhost:3000) no navegador.
 - [Decisões de arquitetura](docs/decisoes.md)
 - [Roadmap](docs/roadmap.md)
 - [Especificação do site](docs/site-specification.md)
+- [Segurança e privacidade](docs/seguranca-privacidade.md)
 - [Histórico de alterações](CHANGELOG.md)
+- [Como contribuir](CONTRIBUTING.md)
 
 <details>
   <summary><strong>Próximas evoluções</strong></summary>
@@ -147,8 +167,13 @@ ideia, abra uma [issue](https://github.com/j-candido/tecnologia-e-acordes/issues
 
 ## Licença
 
-Este projeto está distribuído sob a licença MIT. Consulte o arquivo
-[LICENSE](LICENSE) para mais informações.
+O código-fonte deste projeto está disponível sob a [licença MIT](LICENSE).
+
+Textos autorais, artigos, dados biográficos, currículo, fotografias, nome,
+logotipo e identidade visual de **Juliana Cândido** e do **Tecnologia e Acordes**
+não fazem parte dessa autorização e permanecem protegidos por direitos autorais.
+Consulte o aviso de escopo no próprio arquivo de licença antes de reutilizar o
+conteúdo do portfólio.
 
 ---
 

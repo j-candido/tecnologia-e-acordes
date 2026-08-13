@@ -9,6 +9,10 @@ e a versão atual acompanha o valor declarado em `package.json`.
 
 ### Adicionado
 
+- capturas da página inicial e dos projetos no README;
+- política documentada de segurança e privacidade;
+- orientações para contribuições e organização de commits;
+- cabeçalhos HTTP defensivos para conteúdo, framing, referrer e permissões;
 - conteúdo completo de capacitações, organizado automaticamente por ano;
 - resumos individuais para os cursos;
 - projeto de análise de dados e gestão da informação aplicada às mídias sociais;
@@ -21,6 +25,8 @@ e a versão atual acompanha o valor declarado em `package.json`.
 
 ### Alterado
 
+- Next.js e dependências transitivas atualizados por segurança;
+- licença esclarecida para separar código aberto de conteúdo pessoal e editorial;
 - estrutura compartilhada de cabeçalho, rodapé e recursos globais;
 - navegação, semântica, responsividade e estados de foco;
 - layout dos projetos para acomodar títulos e descrições maiores;

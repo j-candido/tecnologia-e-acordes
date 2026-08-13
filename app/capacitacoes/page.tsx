@@ -2,6 +2,13 @@ import Header from "@/components/Header";
 import Education from "@/components/Education";
 import Footer from "@/components/Footer";
 import Scrolltotop from "@/components/Scrolltotop";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Formação e Capacitações | Tecnologia & Acordes",
+  description:
+    "Formação acadêmica, experiência em tecnologia, cursos e certificações de Juliana Cândido.",
+};
 
 export default function CapacitacoesPage() {
   return (

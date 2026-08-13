@@ -1,50 +1,47 @@
 # Changelog
 
-Todas as mudanças relevantes deste projeto serão documentadas aqui.
+Todas as mudanças relevantes deste projeto são documentadas neste arquivo.
 
-## Em desenvolvimento
+O formato segue as categorias de [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
+e a versão atual acompanha o valor declarado em `package.json`.
 
-- Conteúdo de capacitações organizado automaticamente por ano
-- Novo projeto de análise de dados aplicada às mídias sociais
-- Navegação e estrutura semântica aprimoradas
-- SEO por rota, sitemap e robots
-- Melhorias de segurança e resiliência na integração com o Blogger
-- Testes automatizados dos utilitários do Blogger
+## Não publicado
 
----
+### Adicionado
 
-# v1.0.0
+- conteúdo completo de capacitações, organizado automaticamente por ano;
+- resumos individuais para os cursos;
+- projeto de análise de dados e gestão da informação aplicada às mídias sociais;
+- páginas individuais para publicações importadas do Blogger;
+- metadados por rota, URLs canônicas, Open Graph e Twitter Cards;
+- geração de sitemap e robots;
+- testes automatizados dos utilitários do Blogger;
+- menu móvel, botão de voltar ao topo e link para pular conteúdo;
+- novos canais na página de contato.
 
-## Adicionado
+### Alterado
 
-- Estrutura inicial do projeto
+- estrutura compartilhada de cabeçalho, rodapé e recursos globais;
+- navegação, semântica, responsividade e estados de foco;
+- layout dos projetos para acomodar títulos e descrições maiores;
+- imagem de capa convertida para WebP;
+- identidade visual da página inicial com fundo contínuo e melhor contraste;
+- README e documentação técnica do projeto.
 
-- Header
+### Segurança
 
-- Hero
+- sanitização do HTML recebido do Blogger;
+- restrição de elementos, atributos, protocolos e incorporações permitidos;
+- proteção adicional em links externos;
+- timeout, paginação e limites para as requisições ao feed.
 
-- Sobre
+## 0.1.0
 
-- Formação e Capacitações
+### Adicionado
 
-- Projetos
-
-- Blog
-
-- Contato
-
-- Footer
-
----
-
-## Próxima versão (v1.1)
-
-- Botão "Voltar ao topo"
-
-- Menu mobile
-
-- Melhorias de responsividade
-
-- SEO
-
-- Favicon
+- estrutura inicial em Next.js, React, TypeScript e Tailwind CSS;
+- página inicial com apresentação e perfil;
+- páginas de Sobre, Capacitações, Projetos, Blog e Contato;
+- cabeçalho, rodapé e componentes iniciais;
+- integração inicial com as publicações do Blogger;
+- identidade visual do Tecnologia e Acordes.

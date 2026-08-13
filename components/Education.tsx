@@ -9,13 +9,6 @@ const cards = [
       "Formação no Instituto Federal Catarinense (IFC), Campus Araquari, com base em desenvolvimento de software, dados e infraestrutura de tecnologia.",
   },
   {
-    icon: "💻",
-    category: "Formação técnica",
-    title: "Técnica em Informática",
-    description:
-      "Formação técnica que consolidou conhecimentos práticos em suporte, sistemas e recursos computacionais.",
-  },
-  {
     icon: "📈",
     category: "Pós-graduação",
     title: "Gestão de Tecnologia da Informação",
@@ -28,20 +21,6 @@ const cards = [
     title: "Técnica de Tecnologia da Informação",
     description:
       "Atuação na Universidade Federal de Santa Catarina (UFSC), Campus Blumenau, conectando conhecimento técnico às demandas do ambiente universitário.",
-  },
-  {
-    icon: "🤖",
-    category: "Áreas de interesse",
-    title: "Tecnologia e Inteligência Artificial",
-    description:
-      "Interesse em inteligência artificial, desenvolvimento web, reconhecimento facial e tecnologias emergentes.",
-  },
-  {
-    icon: "🚀",
-    category: "Aprendizado contínuo",
-    title: "Conhecimento aplicado na prática",
-    description:
-      "Estudos e experiências transformados em projetos, conteúdos e soluções para desafios reais.",
   },
 ];
 

@@ -68,7 +68,7 @@ export default async function BlogPostPage({
 
   return (
     <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
-      <article className="mx-auto max-w-4xl px-6 pb-24 pt-24">
+      <article className="mx-auto max-w-4xl px-6 pb-24 pt-14 sm:pt-20">
         <Link
           href="/blog"
           className="mb-10 inline-flex items-center font-semibold text-purple-300 transition hover:text-purple-200"

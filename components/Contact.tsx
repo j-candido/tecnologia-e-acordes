@@ -23,7 +23,7 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section id="contato" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <section id="contato" className="mx-auto max-w-6xl px-6 pb-20 pt-14 sm:pb-28 sm:pt-20">
       <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-start">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">

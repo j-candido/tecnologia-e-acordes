@@ -14,7 +14,7 @@ export default async function Blog() {
   return (
     <section
       id="blog"
-      className="mx-auto max-w-6xl scroll-mt-10 px-6 pb-24 pt-32"
+      className="mx-auto max-w-6xl scroll-mt-10 px-6 pb-24 pt-14 sm:pt-20"
     >
       <div className="mb-12 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">

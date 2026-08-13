@@ -256,7 +256,7 @@ const certificationGroups = Array.from(
 
 export default function Education() {
   return (
-    <section id="capacitacoes" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <section id="capacitacoes" className="mx-auto max-w-6xl px-6 pb-20 pt-14 sm:pb-28 sm:pt-20">
       <div className="max-w-4xl">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
           Formação & Capacitações

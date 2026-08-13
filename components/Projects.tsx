@@ -55,7 +55,7 @@ const projects = [
     return (
       <section
         id="projetos"
-        className="mx-auto max-w-6xl scroll-mt-10 px-6 py-28"
+        className="mx-auto max-w-6xl scroll-mt-10 px-6 pb-20 pt-14 sm:pb-28 sm:pt-20"
       >
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">

@@ -20,6 +20,21 @@ const projects = [
       linkText: null,
     },
     {
+      category: "Pesquisa e análise de dados",
+      title:
+        "Análise de dados e gestão da informação aplicada às mídias sociais: o que as reações às postagens nas mídias sociais podem expressar",
+      description:
+        "Projeto que investiga o que as reações às postagens nas mídias sociais podem expressar, relacionando análise de dados e gestão da informação para compreender comportamentos e padrões de interação.",
+      technologies: [
+        "Análise de dados",
+        "Gestão da informação",
+        "Mídias sociais",
+      ],
+      status: "Em andamento",
+      link: null,
+      linkText: null,
+    },
+    {
       category: "Desenvolvimento Web",
       title: "Portfólio Tecnologia e Acordes",
       description:
@@ -52,7 +67,7 @@ const projects = [
           </p>
         </div>
   
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => (
             <article
               key={project.title}

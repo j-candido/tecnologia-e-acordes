@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 const menuItems = [
   { label: "Início", href: "/" },
@@ -14,13 +15,33 @@ const menuItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [menuOpen]);
 
   function closeMenu() {
     setMenuOpen(false);
   }
 
+  function isActive(href: string) {
+    return href === "/" ? pathname === href : pathname.startsWith(href);
+  }
+
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#070B1A]/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070B1A]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-6 sm:py-4 md:py-5">
         <Link
           href="/"
@@ -30,12 +51,15 @@ export default function Header() {
           Tecnologia e Acordes
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
+        <nav aria-label="Navegação principal" className="hidden items-center gap-8 text-sm text-white/70 md:flex">
           {menuItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition hover:text-white"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`transition hover:text-white ${
+                isActive(item.href) ? "text-purple-200" : ""
+              }`}
             >
               {item.label}
             </Link>
@@ -43,11 +67,13 @@ export default function Header() {
         </nav>
 
         <button
+          ref={menuButtonRef}
           type="button"
           onClick={() => setMenuOpen((current) => !current)}
           className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition hover:border-purple-300/30 hover:bg-white/10 sm:h-11 sm:w-11 md:hidden"
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           <span className="sr-only">
             {menuOpen ? "Fechar menu" : "Abrir menu"}
@@ -73,24 +99,28 @@ export default function Header() {
         </button>
       </div>
 
-      <div
-        className={`overflow-hidden border-t border-white/10 bg-[#070B1A]/95 transition-all duration-300 md:hidden ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <nav className="mx-auto flex max-w-6xl flex-col px-6 py-3">
+      {menuOpen ? (
+        <div
+          id="mobile-navigation"
+          className="border-t border-white/10 bg-[#070B1A]/95 md:hidden"
+        >
+        <nav aria-label="Navegação móvel" className="mx-auto flex max-w-6xl flex-col px-6 py-3">
           {menuItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={closeMenu}
-              className="border-b border-white/5 py-3 text-white/70 transition last:border-b-0 hover:text-white"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`border-b border-white/5 py-3 transition last:border-b-0 hover:text-white ${
+                isActive(item.href) ? "text-purple-200" : "text-white/70"
+              }`}
             >
               {item.label}
             </Link>
           ))}
         </nav>
-      </div>
+        </div>
+      ) : null}
     </header>
   );
 }

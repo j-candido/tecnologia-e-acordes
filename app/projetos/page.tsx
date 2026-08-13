@@ -1,15 +1,17 @@
-import Header from "@/components/Header";
 import Projects from "@/components/Projects";
-import Footer from "@/components/Footer";
-import Scrolltotop from "@/components/Scrolltotop";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "Projetos",
+  description:
+    "Projetos de Juliana Cândido em inteligência artificial, análise de dados, desenvolvimento web e produção de conteúdo.",
+  path: "/projetos",
+});
 
 export default function ProjetosPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33]">
-      <Header />
+    <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
       <Projects />
-      <Footer />
-      <Scrolltotop />
     </main>
   );
 }

@@ -26,7 +26,11 @@ docs/
 
 ```
 
-Cada seção da página foi implementada como um componente independente.
+Cada área do site possui uma rota no App Router e utiliza componentes independentes.
+
+O layout raiz reúne o cabeçalho, o rodapé, o botão de voltar ao topo e os
+metadados globais. A integração em `lib/blogger.ts` consulta, normaliza e
+sanitiza as publicações recebidas do Blogger.
 
 Objetivo:
 

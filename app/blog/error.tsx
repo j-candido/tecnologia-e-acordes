@@ -13,7 +13,7 @@ export default function BlogError({ error, reset }: BlogErrorProps) {
   }, [error]);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33] px-6 text-white">
+    <main id="main-content" tabIndex={-1} className="flex flex-1 items-center justify-center px-6 text-white outline-none">
       <div className="max-w-lg rounded-3xl border border-white/10 bg-white/5 p-10 text-center">
         <h1 className="text-2xl font-bold">Blog temporariamente indisponível</h1>
         <p className="mt-4 leading-7 text-white/65">

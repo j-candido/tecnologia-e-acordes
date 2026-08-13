@@ -1,15 +1,17 @@
-import Header from "@/components/Header";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Scrolltotop from "@/components/Scrolltotop";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "Contato",
+  description:
+    "Entre em contato com Juliana Cândido e acompanhe o Tecnologia e Acordes nas redes profissionais.",
+  path: "/contato",
+});
 
 export default function ContatoPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33]">
-      <Header />
+    <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
       <Contact />
-      <Footer />
-      <Scrolltotop />
     </main>
   );
 }

@@ -1,15 +1,17 @@
-import Header from "@/components/Header";
 import Blog from "@/components/Blog";
-import Scrolltotop from "@/components/Scrolltotop";
-import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "Blog",
+  description:
+    "Artigos sobre tecnologia, inteligência artificial, projetos, aprendizado e música no Tecnologia e Acordes.",
+  path: "/blog",
+});
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33]">
-      <Header />
+    <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
       <Blog />
-      <Scrolltotop />
-      <Footer />
     </main>
   );
 }

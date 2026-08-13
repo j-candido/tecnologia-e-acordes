@@ -68,13 +68,14 @@ export default async function LatestPosts() {
                       alt={`Imagem da publicação ${post.title.$t}`}
                       className="h-52 w-full object-cover transition duration-500 hover:scale-105"
                       loading="lazy"
+                      decoding="async"
                     />
                   </Link>
                 )}
 
-                <p className="text-sm font-medium text-purple-300">
+                <time dateTime={post.published.$t} className="text-sm font-medium text-purple-300">
                   {formatPostDate(post.published.$t)}
-                </p>
+                </time>
 
                 <h3 className="mt-5 text-2xl font-bold leading-snug text-slate-100">
                   <Link

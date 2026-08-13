@@ -1,22 +1,17 @@
-import Header from "@/components/Header";
 import Education from "@/components/Education";
-import Footer from "@/components/Footer";
-import Scrolltotop from "@/components/Scrolltotop";
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Formação e Capacitações | Tecnologia & Acordes",
+export const metadata = createPageMetadata({
+  title: "Formação e Capacitações",
   description:
     "Formação acadêmica, experiência em tecnologia, cursos e certificações de Juliana Cândido.",
-};
+  path: "/capacitacoes",
+});
 
 export default function CapacitacoesPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33]">
-      <Header />
+    <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
       <Education />
-      <Footer />
-      <Scrolltotop />
     </main>
   );
 }

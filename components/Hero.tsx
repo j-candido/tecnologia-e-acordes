@@ -7,7 +7,7 @@ export default function Hero() {
         className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-8 pt-8 md:pt-14 lg:grid-cols-2"
     >
         <div className="max-w-2xl">
-          <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="text-5xl font-bold leading-tight tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
             Onde a tecnologia encontra a criatividade.
           </h1>
 
@@ -35,7 +35,7 @@ export default function Hero() {
               Perfil profissional
             </p>
 
-            <h2 className="mt-5 text-3xl font-bold">
+            <h2 className="mt-5 text-3xl font-bold text-slate-50">
               Juliana Cândido
             </h2>
 
@@ -46,12 +46,12 @@ export default function Hero() {
             <div className="mt-8 space-y-4">
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                 <p className="text-sm text-white/50">Atuação</p>
-                <p className="mt-1 font-semibold">UFSC Blumenau</p>
+                <p className="mt-1 font-semibold text-slate-50">UFSC Blumenau</p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                 <p className="text-sm text-white/50">Formação</p>
-                <p className="mt-1 font-semibold">
+                <p className="mt-1 font-semibold text-slate-50">
                   Bacharelado em Sistemas de Informação
                 </p>
                 <p className="mt-2 text-sm text-white/70">
@@ -61,7 +61,7 @@ export default function Hero() {
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
                 <p className="text-sm text-white/50">Interesses</p>
-                <p className="mt-1 font-semibold">
+                <p className="mt-1 font-semibold text-slate-50">
                   Inteligência Artificial, desenvolvimento e música
                 </p>
               </div>

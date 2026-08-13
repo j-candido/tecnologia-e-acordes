@@ -68,6 +68,8 @@ export default async function Blog() {
                         src={imageUrl}
                         alt={`Imagem da postagem ${post.title.$t}`}
                         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="flex h-full items-center justify-center px-6 text-center text-sm font-medium text-white/50">
@@ -78,7 +80,7 @@ export default async function Blog() {
                 </Link>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <time className="text-sm text-white/45">
+                  <time dateTime={post.published.$t} className="text-sm text-white/60">
                     {formatPostDate(post.published.$t)}
                   </time>
 

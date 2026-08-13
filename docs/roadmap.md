@@ -1,39 +1,21 @@
 # Roadmap
 
-## v1.0
+## Concluído
 
-- [x] Estrutura inicial
+- [x] Página inicial e identidade visual responsiva
+- [x] Páginas de Sobre, Capacitações, Projetos, Blog e Contato
+- [x] Menu móvel e botão de voltar ao topo
+- [x] Integração e páginas individuais do Blogger
+- [x] SEO básico e metadados por rota
+- [x] Sitemap, robots e cartões sociais
+- [x] Sanitização do HTML das publicações
+- [x] Testes dos utilitários do Blogger
 
-- [x] Hero
-
-- [x] Sobre
-
-- [x] Formação
-
-- [x] Projetos
-
-- [x] Blog
-
-- [x] Contato
-
-- [x] Footer
-
-## v1.1
-
-- [ ] Menu mobile
-
-- [ ] Scroll To Top
-
-- [ ] SEO
-
-- [ ] Responsividade
-
-## v2.0
-
-- [ ] Integração com Blogger
+## Próximas evoluções
 
 - [ ] Galeria de certificados
-
-- [ ] Página individual para projetos
-
-- [ ] Dashboard
+- [ ] Páginas individuais para projetos
+- [ ] Busca no blog
+- [ ] Newsletter
+- [ ] Painel para atualização de conteúdo
+- [ ] Monitoramento de desempenho e erros

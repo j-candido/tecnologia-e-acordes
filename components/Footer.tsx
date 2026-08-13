@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t border-white/10">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
@@ -18,7 +20,7 @@ export default function Footer() {
         </div>
 
         <div className="sm:text-right">
-          <p>© 2026 Juliana Cândido.</p>
+          <p>© {currentYear} Juliana Cândido.</p>
 
           <p className="mt-2">
             Desenvolvido com Next.js e Tailwind CSS.

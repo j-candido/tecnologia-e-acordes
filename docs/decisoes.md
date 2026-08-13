@@ -10,7 +10,9 @@ Criar um portfólio moderno, elegante e de fácil manutenção.
 - TypeScript para maior segurança.
 - Tailwind CSS para estilização.
 - Componentização por seções.
-- Layout de página única (One Page).
+- Rotas dedicadas para cada área do portfólio.
+- Layout compartilhado para navegação, rodapé e recursos globais.
+- Blogger como fonte externa das publicações.
 
 ## Filosofia
 

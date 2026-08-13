@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Scrolltotop from "@/components/Scrolltotop";
-
 import {
   cleanPostHtml,
   formatPostDate,
@@ -45,7 +41,15 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.published.$t,
       images: image ? [{ url: image }] : [],
+      url: `/blog/${slug}`,
     },
+    twitter: {
+      card: image ? "summary_large_image" : "summary",
+      title: post.title.$t,
+      description,
+      images: image ? [image] : [],
+    },
+    alternates: { canonical: `/blog/${slug}` },
   };
 }
 
@@ -63,9 +67,7 @@ export default async function BlogPostPage({
   const postHtml = cleanPostHtml(originalHtml);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33]">
-      <Header />
-
+    <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
       <article className="mx-auto max-w-4xl px-6 pb-24 pt-24">
         <Link
           href="/blog"
@@ -97,7 +99,7 @@ export default async function BlogPostPage({
         <div
           className="
             overflow-hidden rounded-3xl bg-white px-8 pb-14 pt-5 shadow-2xl
-            text-[15px] leading-7 text-justify text-slate-800
+            text-[16px] leading-7 text-left text-slate-800
             sm:px-12 sm:pb-16 sm:pt-6
 
             [&>*:first-child]:mt-0
@@ -194,7 +196,7 @@ export default async function BlogPostPage({
             [&_p]:text-[15px]
             [&_p]:font-normal
             [&_p]:leading-7
-            [&_p]:text-justify
+            [&_p]:text-left
 
             [&_ul]:my-5
             [&_ul]:list-disc
@@ -208,14 +210,12 @@ export default async function BlogPostPage({
             [&_li]:text-[15px]
             [&_li]:font-normal
             [&_li]:leading-7
-            [&_li]:text-justify
+            [&_li]:text-left
           "
           dangerouslySetInnerHTML={{ __html: postHtml }}
         />
       </article>
 
-      <Scrolltotop />
-      <Footer />
     </main>
   );
 }

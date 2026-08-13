@@ -1,15 +1,17 @@
-import Header from "@/components/Header";
 import About from "@/components/About";
-import Scrolltotop from "@/components/Scrolltotop";
-import Footer from "@/components/Footer";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "Sobre mim",
+  description:
+    "Conheça a trajetória de Juliana Cândido na tecnologia, sua atuação na UFSC e seus interesses profissionais.",
+  path: "/sobre",
+});
 
 export default function SobrePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#070B1A] via-[#0B1226] to-[#131B33]">
-      <Header />
+    <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
       <About />
-      <Scrolltotop />
-      <Footer />
     </main>
   );
 }

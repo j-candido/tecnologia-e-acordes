@@ -6,6 +6,7 @@ const projects = [
         "Blog criado para compartilhar experiências, estudos, tutoriais e descobertas sobre tecnologia, inteligência artificial e música.",
       technologies: ["Blogger", "Inteligência Artificial", "Produção de conteúdo"],
       status: "Publicado",
+      subtitle: null,
       link: "https://tecnologiaeacordes.blogspot.com/",
       linkText: "Acessar o blog",
     },
@@ -16,21 +17,24 @@ const projects = [
         "Projeto de reconhecimento facial de baixo custo, desenvolvido para identificar pessoas utilizando câmeras simples e tecnologias de visão computacional.",
       technologies: ["Python", "OpenCV", "DeepFace"],
       status: "Em desenvolvimento",
+      subtitle: null,
       link: null,
       linkText: null,
     },
     {
       category: "Pesquisa e análise de dados",
       title:
-        "Análise de dados e gestão da informação aplicada às mídias sociais: o que as reações às postagens nas mídias sociais podem expressar",
+        "Análise de dados e gestão da informação aplicada às mídias sociais",
+      subtitle:
+        "O que as reações às postagens nas mídias sociais podem expressar?",
       description:
-        "Projeto que investiga o que as reações às postagens nas mídias sociais podem expressar, relacionando análise de dados e gestão da informação para compreender comportamentos e padrões de interação.",
+        "Pesquisa que relaciona análise de dados e gestão da informação para investigar comportamentos e padrões de interação nas mídias sociais.",
       technologies: [
         "Análise de dados",
         "Gestão da informação",
         "Mídias sociais",
       ],
-      status: "Em andamento",
+      status: "Em desenvolvimento",
       link: null,
       linkText: null,
     },
@@ -41,6 +45,7 @@ const projects = [
         "Site responsivo criado para reunir minha trajetória profissional, formação, projetos, conteúdos e canais de contato em um único espaço.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
       status: "Em desenvolvimento",
+      subtitle: null,
       link: null,
       linkText: null,
     },
@@ -57,9 +62,9 @@ const projects = [
             Projetos
           </p>
   
-          <h2 className="text-5xl font-bold text-slate-100">
+          <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
             Ideias transformadas em experiências reais.
-          </h2>
+          </h1>
   
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/65">
             Projetos que representam meus estudos, interesses e experiências com
@@ -67,14 +72,14 @@ const projects = [
           </p>
         </div>
   
-        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.title}
               className="flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-7 transition duration-300 hover:-translate-y-1 hover:border-purple-300/30 hover:bg-white/[0.07]"
             >
-              <div className="flex items-start justify-between gap-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple-300">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-purple-300 sm:text-sm">
                   {project.category}
                 </p>
   
@@ -83,9 +88,15 @@ const projects = [
                 </span>
               </div>
   
-              <h3 className="mt-6 text-2xl font-bold leading-snug text-slate-100">
+              <h2 className="mt-6 max-w-xl text-2xl font-bold leading-snug text-slate-100 sm:text-3xl">
                 {project.title}
-              </h3>
+              </h2>
+
+              {project.subtitle ? (
+                <p className="mt-3 max-w-xl text-base font-medium leading-7 text-purple-200/80">
+                  {project.subtitle}
+                </p>
+              ) : null}
   
               <p className="mt-4 flex-1 leading-7 text-white/65">
                 {project.description}

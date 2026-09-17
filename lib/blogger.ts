@@ -42,7 +42,7 @@ export const getBloggerPosts = cache(async (): Promise<BloggerPost[]> => {
 
     const response = await fetch(url, {
       signal: AbortSignal.timeout(BLOG_REQUEST_TIMEOUT_MS),
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     });
 
     if (!response.ok) {

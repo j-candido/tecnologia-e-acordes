@@ -9,8 +9,8 @@ export default function About() {
             Sobre
           </p>
   
-          <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
-          Tecnologia da Informação
+          <h1 className="mt-4 text-center text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
+          Tecnologia e Acordes
           </h1>
   
           <div lang="pt-BR" className="mt-12 space-y-5 text-left text-lg leading-[1.6] text-white/70 [text-align-last:left] sm:hyphens-auto sm:text-justify">

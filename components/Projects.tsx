@@ -78,7 +78,7 @@ const projects = [
                 </p>
               ) : null}
   
-              <p className="mt-4 flex-1 leading-7 text-white/65">
+              <p lang="pt-BR" className="mt-4 flex-1 text-left leading-7 text-white/65 [text-align-last:left] sm:hyphens-auto sm:text-justify">
                 {project.description}
               </p>
   

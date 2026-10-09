@@ -94,7 +94,7 @@ export default async function Blog() {
                   </h2>
 
                   {description && (
-                    <p className="mt-3 min-h-[72px] line-clamp-3 text-sm leading-6 text-white/60">
+                    <p lang="pt-BR" className="mt-3 min-h-[72px] line-clamp-3 text-left text-sm leading-6 text-white/60 [text-align-last:left] sm:hyphens-auto sm:text-justify">
                       {description}
                       {cleanContent.length > 150 ? "..." : ""}
                     </p>

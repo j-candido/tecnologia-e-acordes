@@ -82,7 +82,7 @@ export default async function LatestPosts() {
                   </Link>
                 </h3>
 
-                <p className="mt-4 line-clamp-4 flex-1 text-[16px] leading-7 text-slate-300">
+                <p lang="pt-BR" className="mt-4 line-clamp-4 flex-1 text-left text-[16px] leading-7 text-slate-300 [text-align-last:left] sm:hyphens-auto sm:text-justify">
                   {createExcerpt(post)}
                 </p>
 

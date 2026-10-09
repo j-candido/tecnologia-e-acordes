@@ -12,7 +12,7 @@ export default function FeaturedCourse() {
   const course = getNextCourse(courses, today);
 
   return (
-    <section aria-labelledby="featured-course-title" className="mx-auto max-w-6xl px-6 pb-20 pt-12">
+    <section aria-labelledby="featured-course-title" className="mx-auto max-w-6xl px-6 pt-12">
       <h2 id="featured-course-title" className="text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
         {course ? "Curso em destaque" : "Conheça os cursos realizados"}
       </h2>

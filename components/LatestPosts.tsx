@@ -31,20 +31,16 @@ export default async function LatestPosts() {
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-20 pt-12">
+    <section className="mx-auto max-w-6xl px-6 pb-20 pt-9 md:pt-14">
       <div className="max-w-4xl">
-        <h2 className="text-4xl font-bold leading-tight text-slate-100 md:text-5xl">
+        <h2 className="text-4xl font-bold leading-[1.2] text-slate-100 md:text-5xl">
           Publicações mais recentes
         </h2>
 
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-          Conteúdos sobre tecnologia, inteligência artificial, projetos,
-          aprendizado e música.
-        </p>
       </div>
 
       {posts.length > 0 ? (
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => {
             const postSlug = getPostSlug(post);
             const postUrl = `/blog/${postSlug}`;
@@ -106,7 +102,7 @@ export default async function LatestPosts() {
           })}
         </div>
       ) : (
-        <div className="mt-14 rounded-3xl border border-white/10 bg-white/5 p-8">
+        <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-8">
           <p className="text-slate-300">
             Não foi possível carregar as publicações neste momento.
           </p>

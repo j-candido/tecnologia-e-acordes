@@ -13,7 +13,7 @@ export default function About() {
           Sobre o Tecnologia e Acordes
           </h1>
   
-          <div className="mt-12 space-y-5 text-lg leading-[1.6] text-white/70">
+          <div lang="pt-BR" className="mt-12 space-y-5 text-left text-lg leading-[1.6] text-white/70 [text-align-last:left] sm:hyphens-auto sm:text-justify">
             <p>
               O <strong className="text-white">Tecnologia e Acordes</strong> é um
               espaço para compartilhar conteúdos, cursos, experiências e
@@ -29,7 +29,7 @@ export default function About() {
           <h2 className="mt-20 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
             Quem está por trás
           </h2>
-          <div className="mt-10 space-y-5 text-lg leading-[1.6] text-white/70">
+          <div lang="pt-BR" className="mt-10 space-y-5 text-left text-lg leading-[1.6] text-white/70 [text-align-last:left] sm:hyphens-auto sm:text-justify">
   
             <p>
               Sou <strong className="text-white">Juliana Cândido</strong>,

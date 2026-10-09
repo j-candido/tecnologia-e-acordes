@@ -12,8 +12,10 @@ export const metadata = createPageMetadata({
 export default function SobrePage() {
   return (
     <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
-      <About />
-      <Projects />
+      <div className="mx-auto max-w-6xl px-6 pb-20 pt-14 sm:pb-28 sm:pt-20">
+        <About />
+        <Projects />
+      </div>
     </main>
   );
 }

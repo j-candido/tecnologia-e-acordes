@@ -6,7 +6,7 @@ export default function CourseCard({ course, featured = false }: { course: Cours
   const registrationUrl = getRegistrationUrl(course);
 
   return (
-    <article aria-labelledby={`course-${course.id}`} className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-start">
+    <article aria-labelledby={`course-${course.id}`} className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 lg:grid lg:grid-cols-[minmax(0,7fr)_minmax(0,13fr)] lg:items-center">
       {course.cover ? (
         <Image
           src={course.cover.src}
@@ -54,7 +54,7 @@ export default function CourseCard({ course, featured = false }: { course: Cours
             </dd>
           </div>
         </dl>
-        <div className="mt-5 border-t border-white/10 pt-5">
+        <div className={`mt-5 border-t border-white/10 pt-5 ${registrationUrl ? "text-right" : ""}`}>
           {registrationUrl ? (
             <>
               <a href={registrationUrl} target="_blank" rel="noopener noreferrer" className="inline-flex rounded-full border border-purple-300/30 bg-purple-300/10 px-6 py-3 font-semibold text-purple-100 transition hover:border-purple-300/50 hover:bg-purple-300/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-300">

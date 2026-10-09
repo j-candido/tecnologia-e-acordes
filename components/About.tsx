@@ -2,9 +2,8 @@ export default function About() {
     return (
       <section
         id="sobre"
-        className="mx-auto max-w-6xl px-6 pb-20 pt-14 sm:pb-28 sm:pt-20"
       >
-        <div className="max-w-4xl">
+        <div>
   
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
             Sobre
@@ -14,7 +13,7 @@ export default function About() {
           Sobre o Tecnologia e Acordes
           </h1>
   
-          <div className="mt-12 space-y-8 text-lg leading-9 text-white/70">
+          <div className="mt-12 space-y-5 text-lg leading-[1.6] text-white/70">
             <p>
               O <strong className="text-white">Tecnologia e Acordes</strong> é um
               espaço para compartilhar conteúdos, cursos, experiências e
@@ -30,7 +29,7 @@ export default function About() {
           <h2 className="mt-20 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
             Quem está por trás
           </h2>
-          <div className="mt-10 space-y-8 text-lg leading-9 text-white/70">
+          <div className="mt-10 space-y-5 text-lg leading-[1.6] text-white/70">
   
             <p>
               Sou <strong className="text-white">Juliana Cândido</strong>,

@@ -1,16 +1,5 @@
 const projects = [
     {
-      category: "Conteúdo e tecnologia",
-      title: "Tecnologia e Acordes",
-      description:
-        "Blog criado para compartilhar experiências, estudos, tutoriais e descobertas sobre tecnologia, inteligência artificial e música.",
-      technologies: ["Blogger", "Inteligência Artificial", "Produção de conteúdo"],
-      status: "Publicado",
-      subtitle: null,
-      link: "https://tecnologiaeacordes.blogspot.com/",
-      linkText: "Acessar o blog",
-    },
-    {
       category: "Inteligência Artificial",
       title: "Sistema de Reconhecimento Facial",
       description:
@@ -55,24 +44,15 @@ const projects = [
     return (
       <section
         id="projetos"
-        className="mx-auto max-w-6xl scroll-mt-10 px-6 pb-20 pt-14 sm:pb-28 sm:pt-20"
+        className="mt-10 scroll-mt-10 md:mt-16"
       >
-        <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
+        <div>
+          <h2 className="text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
             Projetos
-          </p>
-  
-          <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
-            Projetos que desenvolvo
           </h2>
-  
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-white/65">
-            Projetos que representam meus estudos, interesses e experiências com
-            tecnologia, inteligência artificial e produção de conteúdo.
-          </p>
         </div>
   
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.title}

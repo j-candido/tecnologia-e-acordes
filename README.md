@@ -38,7 +38,7 @@
 ## Sobre o projeto
 
 O **Tecnologia e Acordes** é o portfólio pessoal de **Juliana Cândido**. O
-projeto reúne trajetória profissional, formação, capacitações, pesquisas,
+projeto reúne trajetória profissional, formação, cursos, pesquisas,
 projetos e publicações em um espaço que aproxima tecnologia e criatividade.
 
 Além das páginas institucionais, o site consome automaticamente as publicações
@@ -77,7 +77,8 @@ buscadores e compartilhamento em redes sociais.
 
 | Área | Recursos |
 | --- | --- |
-| Portfólio | Apresentação, trajetória, capacitações, projetos e contato |
+| Portfólio | Sobre o espaço, trajetória, formação, projetos e contato |
+| Cursos | Cursos ministrados por Juliana, agenda, inscrições e histórico |
 | Blog | Integração automática com o Blogger e páginas individuais |
 | Segurança | Sanitização do HTML recebido de fontes externas |
 | SEO | Metadados por rota, URLs canônicas, Open Graph, sitemap e robots |

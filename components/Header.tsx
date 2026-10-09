@@ -6,9 +6,8 @@ import { useEffect, useRef, useState } from "react";
 
 const menuItems = [
   { label: "Início", href: "/" },
-  { label: "Sobre mim", href: "/sobre" },
-  { label: "Capacitações", href: "/capacitacoes" },
-  { label: "Projetos", href: "/projetos" },
+  { label: "Sobre", href: "/sobre" },
+  { label: "Cursos", href: "/cursos" },
   { label: "Blog", href: "/blog" },
   { label: "Contato", href: "/contato" },
 ];

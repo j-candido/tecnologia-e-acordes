@@ -2,77 +2,24 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section
-        id="inicio"
-        className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-8 pt-8 md:pt-14 lg:grid-cols-2"
-    >
-        <div className="max-w-2xl">
-          <h1 className="text-5xl font-bold leading-tight tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
-            Onde a tecnologia encontra a criatividade.
-          </h1>
-
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-white/65">
-            Um espaço para compartilhar projetos, estudos, experiências e
-            descobertas sobre tecnologia, inteligência artificial e música.
-          </p>
-
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link
-              href="/projetos"
-              className="rounded-xl bg-white px-6 py-3 text-center font-semibold text-[#0d0714] transition hover:bg-purple-100"
-            >
-              Conheça meus projetos
-            </Link>
-
-            
-          </div>
+    <section id="inicio" className="mx-auto max-w-[960px] px-5 pb-8 pt-8 text-center sm:px-6 sm:pt-10">
+      <div>
+        <h1 className="text-4xl font-bold leading-[1.15] tracking-tight text-slate-50 sm:text-[42px] lg:text-5xl">
+          Onde a tecnologia encontra a criatividade.
+        </h1>
+        <p className="mx-auto mt-5 max-w-[760px] text-lg leading-8 text-white/65">
+          Conteúdos, cursos e experiências sobre tecnologia, inteligência artificial
+          e música. Um espaço para aprender, explorar ideias e compartilhar descobertas.
+        </p>
+        <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link href="/blog" className="rounded-xl bg-white px-6 py-3 text-center font-semibold text-[#0d0714] transition hover:bg-purple-100">
+            Explorar o blog
+          </Link>
+          <Link href="/cursos" className="rounded-xl border border-purple-300/30 bg-purple-300/10 px-6 py-3 text-center font-semibold text-purple-100 transition hover:border-purple-300/50 hover:bg-purple-300/15">
+            Conhecer os cursos
+          </Link>
         </div>
-        <div className="relative">
-          <div className="absolute -inset-6 rounded-3xl bg-purple-500/20 blur-3xl" />
-
-          <div className="relative rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">
-              Perfil profissional
-            </p>
-
-            <h2 className="mt-5 text-3xl font-bold text-slate-50">
-              Juliana Cândido
-            </h2>
-
-            <p className="mt-2 text-white/60">
-              Técnica em Tecnologia da Informação
-            </p>
-
-            <div className="mt-8 space-y-4">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-sm text-white/50">Atuação</p>
-                <p className="mt-1 font-semibold text-slate-50">UFSC Blumenau</p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-sm text-white/50">Formação</p>
-                <p className="mt-1 font-semibold text-slate-50">
-                  Bacharelado em Sistemas de Informação
-                </p>
-                <p className="mt-2 text-sm text-white/70">
-                  Pós-graduação em Gestão de Tecnologia da Informação
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-sm text-white/50">Interesses</p>
-                <p className="mt-1 font-semibold text-slate-50">
-                  Inteligência Artificial, desenvolvimento e música
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-8 text-sm leading-7 text-white/60">
-              Criando projetos, aprendendo novas tecnologias e compartilhando
-              conhecimento de forma simples.
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
   );
 }

@@ -18,6 +18,12 @@ const contentSecurityPolicy = `
 `;
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      { source: "/capacitacoes", destination: "/sobre", permanent: true },
+      { source: "/projetos", destination: "/sobre", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

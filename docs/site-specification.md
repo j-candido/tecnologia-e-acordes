@@ -2,8 +2,8 @@
 
 ## Objetivo
 
-Apresentar Juliana Cândido, sua trajetória profissional, formação, capacitações,
-projetos e publicações em um portfólio que relaciona tecnologia e criatividade.
+Compartilhar conteúdos, cursos, experiências e descobertas sobre tecnologia,
+inteligência artificial e música, apresentando também Juliana Cândido e seus projetos.
 
 ## Público
 
@@ -22,28 +22,37 @@ rosa, preservando legibilidade e consistência entre as páginas.
 
 ### Página inicial
 
-- apresentar a proposta do site e a identidade profissional;
-- destacar perfil, atuação, formação e interesses;
-- oferecer acesso direto aos projetos;
-- exibir publicações recentes do Blogger.
+- preservar o banner original e apresentar a proposta do site com acesso ao blog e aos cursos;
+- destacar o próximo curso usando os dados compartilhados de `lib/courses.ts`;
+- apresentar capa inteira e informações lado a lado no desktop e empilhadas no celular;
+- liberar inscrição externa somente quando confirmada; nos demais casos, levar a `/cursos`;
+- quando não houver próximos cursos, oferecer acesso aos cursos realizados;
+- preservar as publicações recentes e a integração automática com o Blogger;
+- apresentar um bloco breve sobre o espaço com link para `/sobre`, antes do rodapé.
 
 ### Sobre
 
-- apresentar a trajetória e o perfil profissional;
-- contextualizar formação, experiência e áreas de atuação.
+- apresentar o espaço em “Sobre o Tecnologia e Acordes”;
+- reunir perfil, atuação na UFSC Blumenau e formação principal em “Quem está por trás”;
+- incluir o endereço real do currículo Lattes;
+- reunir os projetos existentes em “Projetos que desenvolvo”, preservando informações e links.
 
-### Capacitações
+### Cursos
 
-- listar cursos e capacitações em ordem cronológica decrescente;
-- agrupar os cursos pelo ano em que foram realizados;
-- informar título, instituição, carga horária e um resumo de cada curso.
+- apresentar cursos ministrados por Juliana Cândido, com dados únicos em `lib/courses.ts`;
+- usar `CourseCard` para reutilizar a apresentação em outras páginas;
+- informar título, capa original inteira, descrição, público quando informado, data,
+  horário, local ou modalidade e situação;
+- mostrar “A confirmar” para dados pendentes e liberar “Inscreva-se” somente com
+  inscrições abertas e endereço HTTPS válido da UFSC, em nova aba;
+- listar próximos cursos antes do histórico, sem inscrição ativa em cursos encerrados;
+- remover a listagem de capacitações cursadas, sem transferi-la para Sobre.
 
-### Projetos
+### Rotas antigas
 
-- apresentar projetos publicados e em desenvolvimento;
-- informar área, situação, descrição e tecnologias relacionadas;
-- incluir o projeto de análise de dados e gestão da informação aplicada às
-  reações em mídias sociais.
+- redirecionar `/capacitacoes` e `/projetos` permanentemente para `/sobre`;
+- preservar eventuais rotas individuais de projetos;
+- reunir os projetos na página `/sobre`, com a âncora `/sobre#projetos`.
 
 ### Blog
 
@@ -61,6 +70,7 @@ rosa, preservando legibilidade e consistência entre as páginas.
 ## Navegação
 
 - manter cabeçalho e rodapé em todas as páginas;
+- ordenar os menus de desktop e celular em Início, Sobre, Cursos, Blog e Contato;
 - indicar visualmente a rota ativa;
 - oferecer menu adaptado para telas menores;
 - permitir fechar o menu móvel com a tecla `Escape`;

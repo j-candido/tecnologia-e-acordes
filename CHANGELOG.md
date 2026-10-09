@@ -9,6 +9,9 @@ e a versão atual acompanha o valor declarado em `package.json`.
 
 ### Adicionado
 
+- dados reutilizáveis e cartão de cursos ministrados por Juliana Cândido;
+- minicurso Segurança Digital na Prática, previsto para 21/10/2026 na UFSC Blumenau;
+- validação de inscrições externas da UFSC e ordenação de próximos cursos e histórico;
 - capturas da página inicial e dos projetos no README;
 - política documentada de segurança e privacidade;
 - orientações para contribuições e organização de commits;
@@ -25,6 +28,14 @@ e a versão atual acompanha o valor declarado em `package.json`.
 
 ### Alterado
 
+- inicial reorganizada com apresentação, curso em destaque compartilhado, Blogger e resumo de Sobre;
+- perfil profissional removido da inicial; banner e publicações originais preservados;
+- destaque omite cursos encerrados ou com data passada e oferece acesso ao histórico quando necessário;
+- menus de desktop e celular reorganizados em Início, Sobre, Cursos, Blog e Contato;
+- Sobre reúne propósito do espaço, perfil, formação principal, Lattes e projetos;
+- `/cursos` apresenta cursos ministrados, com capa original, descrições compartilhadas e inscrições externas;
+- `/capacitacoes` e `/projetos` redirecionam permanentemente (308) para `/sobre`;
+- listagem de capacitações removida; links internos, metadados e sitemap atualizados;
 - Next.js e dependências transitivas atualizados por segurança;
 - licença esclarecida para separar código aberto de conteúdo pessoal e editorial;
 - estrutura compartilhada de cabeçalho, rodapé e recursos globais;

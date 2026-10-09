@@ -33,10 +33,11 @@ tecnologia-e-acordes/
 
 | Rota | Responsabilidade |
 | --- | --- |
-| `/` | Apresentação, perfil e publicações recentes |
-| `/sobre` | Trajetória e informações profissionais |
-| `/capacitacoes` | Cursos e capacitações agrupados por ano |
-| `/projetos` | Projetos desenvolvidos e em andamento |
+| `/` | Banner, apresentação, curso em destaque, publicações recentes e resumo de Sobre |
+| `/sobre` | Propósito do espaço, perfil e formação de Juliana, projetos e Lattes |
+| `/cursos` | Cursos ministrados por Juliana Cândido, próximos e histórico |
+| `/capacitacoes` | Redirecionamento permanente (308) para `/sobre` |
+| `/projetos` | Redirecionamento permanente (308) para `/sobre` |
 | `/blog` | Listagem das publicações obtidas do Blogger |
 | `/blog/[slug]` | Página individual de uma publicação |
 | `/contato` | Canais profissionais e redes sociais |
@@ -48,6 +49,23 @@ tecnologia-e-acordes/
 O layout raiz, em `app/layout.tsx`, reúne o cabeçalho, o rodapé, o botão de
 voltar ao topo, o link para pular diretamente ao conteúdo e os metadados globais.
 As páginas reutilizam componentes de seção localizados em `components/`.
+
+Os redirecionamentos em `next.config.ts` correspondem somente às duas rotas
+antigas, sem abranger páginas individuais. A navegação segue Início, Sobre,
+Cursos, Blog e Contato. O sitemap inclui as rotas atuais e omite os redirecionamentos.
+
+`lib/courses.ts` concentra os cursos, a ordenação e a validação de inscrições.
+`components/CourseCard.tsx` apresenta os dados e pode ser reutilizado na página
+inicial. Capas locais são exibidas sem otimização, recorte ou alteração de cores,
+na proporção original. O primeiro curso utiliza a capa original PNG de 1080 × 1350
+fornecida pela autora e aguarda horário e local completo. O público a partir de
+40 anos é informado na descrição. As inscrições estão abertas, conforme confirmação da autora. O endereço de inscrição
+informado é `https://inscricoes.ufsc.br/seguranca-digital`.
+
+`FeaturedCourse` escolhe o próximo curso pela data local de São Paulo, sem
+apresentar cursos encerrados ou com data passada como futuros. A inicial
+revalida a cada cinco minutos e reutiliza `CourseCard` com disposição horizontal
+em telas grandes. `AboutPreview` encerra o conteúdo antes do rodapé compartilhado.
 
 ## Integração com o Blogger
 

@@ -62,9 +62,9 @@ const projects = [
             Projetos
           </p>
   
-          <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
-            Ideias transformadas em experiências reais.
-          </h1>
+          <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
+            Projetos que desenvolvo
+          </h2>
   
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/65">
             Projetos que representam meus estudos, interesses e experiências com
@@ -88,9 +88,9 @@ const projects = [
                 </span>
               </div>
   
-              <h2 className="mt-6 max-w-xl text-2xl font-bold leading-snug text-slate-100 sm:text-3xl">
+              <h3 className="mt-6 max-w-xl text-2xl font-bold leading-snug text-slate-100 sm:text-3xl">
                 {project.title}
-              </h2>
+              </h3>
 
               {project.subtitle ? (
                 <p className="mt-3 max-w-xl text-base font-medium leading-7 text-purple-200/80">

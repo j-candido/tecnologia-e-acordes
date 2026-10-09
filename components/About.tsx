@@ -5,12 +5,12 @@ export default function About() {
       >
         <div>
   
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.28em] text-purple-300">
             Sobre
           </p>
   
           <h1 className="mt-4 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
-          Sobre o Tecnologia e Acordes
+          Tecnologia da Informação
           </h1>
   
           <div lang="pt-BR" className="mt-12 space-y-5 text-left text-lg leading-[1.6] text-white/70 [text-align-last:left] sm:hyphens-auto sm:text-justify">

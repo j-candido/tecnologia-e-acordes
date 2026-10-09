@@ -2,7 +2,6 @@ import SiteCover from "@/components/SiteCover";
 import Hero from "@/components/Hero";
 import LatestPosts from "@/components/LatestPosts";
 import FeaturedCourse from "@/components/FeaturedCourse";
-import AboutPreview from "@/components/AboutPreview";
 
 export const revalidate = 300;
 
@@ -13,7 +12,6 @@ export default function Home() {
       <Hero />
       <FeaturedCourse />
       <LatestPosts />
-      <AboutPreview />
     </main>
   );
 }

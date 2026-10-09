@@ -31,7 +31,7 @@ export default async function LatestPosts() {
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-20 pt-9 md:pt-14">
+    <section className="mx-auto max-w-6xl px-6 pb-10 pt-9 md:pb-14 md:pt-14">
       <div className="max-w-4xl">
         <h2 className="text-4xl font-bold leading-[1.2] text-slate-100 md:text-5xl">
           Publicações mais recentes

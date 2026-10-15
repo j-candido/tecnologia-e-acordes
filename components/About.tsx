@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
     return (
       <section
@@ -29,33 +31,43 @@ export default function About() {
           <h2 className="mt-20 text-4xl font-bold leading-tight text-slate-100 sm:text-5xl">
             Quem está por trás
           </h2>
-          <div lang="pt-BR" className="mt-10 space-y-5 text-left text-lg leading-[1.6] text-white/70 [text-align-last:left] sm:hyphens-auto sm:text-justify">
+          <div className="mt-10 grid items-center gap-8 md:grid-cols-[minmax(0,0.85fr)_minmax(0,2fr)] md:gap-10">
+            <Image
+              src="/images/juliana-candido.webp"
+              alt="Juliana Cândido"
+              width={720}
+              height={900}
+              sizes="(min-width: 1152px) 322px, (min-width: 768px) 30vw, (min-width: 368px) 320px, calc(100vw - 48px)"
+              className="mx-auto h-auto w-full max-w-80 rounded-xl"
+            />
+            <div lang="pt-BR" className="min-w-0 space-y-5 text-left text-lg leading-[1.6] text-white/70 [text-align-last:left] sm:hyphens-auto sm:text-justify">
   
-            <p>
-              Sou <strong className="text-white">Juliana Cândido</strong>,
-              profissional da área de Tecnologia da Informação, apaixonada por
-              tecnologia, inteligência artificial e aprendizado contínuo.
-            </p>
+              <p>
+                Sou <strong className="text-white">Juliana Cândido</strong>,
+                profissional da área de Tecnologia da Informação, apaixonada por
+                tecnologia, inteligência artificial e aprendizado contínuo.
+              </p>
   
-            <p>
-              Atualmente atuo como{" "}
-              <strong className="text-white">
-                Técnica em Tecnologia da Informação
-              </strong>{" "}
-              na Universidade Federal de Santa Catarina (UFSC), Campus Blumenau,
-              contribuindo com infraestrutura, suporte e soluções tecnológicas
-              para a comunidade acadêmica.
-            </p>
+              <p>
+                Atualmente atuo como{" "}
+                <strong className="text-white">
+                  Técnica em Tecnologia da Informação
+                </strong>{" "}
+                na Universidade Federal de Santa Catarina (UFSC), Campus Blumenau,
+                contribuindo com infraestrutura, suporte e soluções tecnológicas
+                para a comunidade acadêmica.
+              </p>
   
-            <p>
-              Sou bacharela em <strong className="text-white">Sistemas de Informação</strong>{" "}
-              pelo Instituto Federal Catarinense (IFC), Campus Araquari, com formação
-              em desenvolvimento de software, dados e infraestrutura de tecnologia,
-              e tenho especialização em{" "}
-              <strong className="text-white">Gestão de Tecnologia da Informação</strong>.
-            </p>
+              <p>
+                Sou bacharela em <strong className="text-white">Sistemas de Informação</strong>{" "}
+                pelo Instituto Federal Catarinense (IFC), Campus Araquari, com formação
+                em desenvolvimento de software, dados e infraestrutura de tecnologia,
+                e tenho especialização em{" "}
+                <strong className="text-white">Gestão de Tecnologia da Informação</strong>.
+              </p>
   
   
+            </div>
           </div>
           <a
             href="https://lattes.cnpq.br/3686286770123469"

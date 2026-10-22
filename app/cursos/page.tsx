@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Cursos",
   description:
-    "Cursos ministrados por Juliana Cândido. Conheça o minicurso Segurança Digital na Prática, com data prevista em 21/10/2026 na UFSC Blumenau.",
+    "Cursos ministrados por Juliana Cândido. Conheça o minicurso Segurança Digital na Prática, realizado em 21/10/2026 na UFSC Blumenau.",
   path: "/cursos",
 });
 

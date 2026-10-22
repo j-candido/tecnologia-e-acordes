@@ -25,23 +25,23 @@ export const courses: Course[] = [
       height: 1350,
     },
     description:
-      "Minicurso prático voltado a pessoas a partir de 40 anos, com orientações para usar o celular e as redes sociais com mais segurança. Por meio de exemplos do WhatsApp, Facebook, Instagram e TikTok, os participantes aprenderão a reconhecer golpes e notícias falsas, conferir informações antes de compartilhá-las e adotar cuidados ao clicar em links, fornecer dados ou realizar pagamentos. O minicurso também abordará os primeiros passos a tomar caso a pessoa seja vítima de um golpe.",
+      "Minicurso prático voltado a pessoas a partir de 40 anos, com orientações para usar o celular e as redes sociais com mais segurança. Por meio de exemplos do WhatsApp, Facebook, Instagram e TikTok, os participantes aprenderam a reconhecer golpes e notícias falsas, conferir informações antes de compartilhá-las e adotar cuidados ao clicar em links, fornecer dados ou realizar pagamentos. O minicurso também abordou os primeiros passos a tomar caso a pessoa seja vítima de um golpe.",
     shortDescription:
-      "Minicurso prático para pessoas a partir de 40 anos sobre o uso seguro do celular e das redes sociais. Aprenda a reconhecer golpes e notícias falsas, proteger seus dados e saber como agir caso seja vítima de um golpe.",
+      "Minicurso prático para pessoas a partir de 40 anos sobre o uso seguro do celular e das redes sociais. Realizado em 21 de outubro de 2026 na UFSC Blumenau, o encontro abordou como reconhecer golpes e notícias falsas, proteger dados e agir caso seja vítima de um golpe.",
     date: "2026-10-21",
-    dateIsTentative: true,
+    dateIsTentative: false,
     time: "14:00",
     location: "UFSC Blumenau",
     locationDetails: "Sala B201 — Labinfo 1",
-    registrationUrl: "https://inscricoes.ufsc.br/seguranca-digital",
-    status: "open",
+    registrationUrl: null,
+    status: "closed",
   },
 ];
 
 export const courseStatusLabels = {
   open: "Inscrições abertas",
   soon: "Em breve",
-  closed: "Encerrado",
+  closed: "Realizado",
 };
 
 // Só libera inscrições confirmadas com endereço seguro no site da UFSC.
